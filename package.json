@@ -1,0 +1,17 @@
+{
+  "name": "byahe-ni-long-digital-card",
+  "version": "1.0.0",
+  "description": "Mobile-first personal travel and adventure digital business card for Byahe ni Long",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": [
+    "travel",
+    "nfc",
+    "digital-business-card",
+    "byahe-ni-long"
+  ],
+  "author": "Byahe ni Long",
+  "license": "MIT"
+}

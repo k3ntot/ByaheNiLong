@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+  <!-- Primary Meta Tags -->
+  <title>Byahe ni Long | Digital Business Card & Travel Adventures</title>
+  <meta name="title" content="Byahe ni Long | Digital Business Card & Travel Adventures" />
+  <meta name="description" content="Mga Lakad, Tanawin, at Kwentong Baon. Samahan si Long sa pag-explore ng mga bagong destinasyon, beach coves, at outdoor adventures." />
+  <meta name="keywords" content="Byahe ni Long, Travel Blog, Philippines Travel, Siargao, Balabac, Calaguas, Taipei, Digital Business Card, NFC" />
+  <meta name="author" content="Byahe ni Long" />
+  <meta name="theme-color" content="#f7f5f0" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.facebook.com/ByaheNiLong" />
+  <meta property="og:title" content="Byahe ni Long | Digital Business Card" />
+  <meta property="og:description" content="Mga Lakad, Tanawin, at Kwentong Baon. Tara, sabay tayong maglakbay at tuklasin ang kagandahan ng bawat destinasyon!" />
+  <meta property="og:image" content="assets/images/main-banner.jpg" />
+
+  <!-- Preconnect to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <!-- Favicon / Apple Touch Icon -->
+  <link rel="icon" type="image/jpeg" href="assets/images/main-banner.jpg" />
+  <link rel="apple-touch-icon" href="assets/images/main-banner.jpg" />
+</head>
+<body>
+
+  <!-- Main Mobile-First Shell -->
+  <div class="app-shell" id="appShell">
+
+    <!-- Top Sticky Navigation Bar -->
+    <header class="top-nav" aria-label="Quick Navigation">
+      <a href="#hero" class="brand-mini" aria-label="Byahe ni Long Home">
+        <img
+          src="assets/images/main-banner.jpg"
+          alt="Byahe ni Long Logo"
+          class="brand-mini-avatar"
+          id="topNavAvatar"
+          width="36"
+          height="36"
+          onerror="this.src='assets/images/main%20banner.jpg'"
+        />
+        <span class="brand-mini-text" id="topNavBrandName">Byahe ni Long</span>
+      </a>
+      <div class="nav-actions">
+        <a href="#contact" class="icon-btn-pill" id="navContactShortcut" aria-label="Tumalon sa Kontak">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>Kontak</span>
+        </a>
+      </div>
+    </header>
+
+    <!-- PRIORITY 1: BRAND IDENTITY (HERO / MAIN BANNER) -->
+    <section class="hero-section" id="hero" aria-labelledby="heroBrandTitle">
+      <div class="hero-content">
+        <!-- Official Brand Image: Clean museum-quality frame preserving 1:1 proportions -->
+        <div class="hero-brand-card" id="heroBrandCard">
+          <div class="hero-brand-img-wrap">
+            <img
+              src="assets/images/main-banner.jpg"
+              alt="Byahe ni Long Official Brand Image"
+              class="hero-brand-img"
+              id="heroMainBannerImg"
+              width="360"
+              height="360"
+              loading="eager"
+              onerror="this.src='assets/images/main%20banner.jpg'"
+            />
+            <div class="verified-nfc-badge" title="Official Byahe ni Long" aria-label="Official Verified Brand">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </div>
+          </div>
+          <div class="hero-brand-badge-pill">
+            <span class="live-dot" aria-hidden="true"></span>
+            <span id="heroBadgeText">Travel & Adventure</span>
+          </div>
+        </div>
+
+        <h1 class="hero-title" id="heroBrandTitle">Byahe ni Long</h1>
+        <p class="hero-tagline" id="heroTagline">Mga Lakad, Tanawin, at Kwentong Baon.</p>
+        <p class="hero-intro" id="heroIntro">
+          Tara, samahan ako sa pag-explore ng mga lugar, pagtuklas ng bagong destinations, at pagbuo ng mga kwentong sulit balikan.
+        </p>
+
+        <!-- PRIORITY 2: PRIMARY ACTION (Follow on Facebook most prominent, Explore My Adventures secondary) -->
+        <div class="hero-cta-group">
+          <!-- Primary Action Button -->
+          <a
+            href="https://www.facebook.com/ByaheNiLong"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary"
+            id="btnFollowFacebookHero"
+            aria-label="Follow Byahe ni Long on Facebook"
+          >
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+            <span>Follow on Facebook</span>
+          </a>
+
+          <!-- Secondary Action Button -->
+          <a
+            href="#gallery"
+            class="btn btn-secondary"
+            id="btnExploreAdventures"
+            aria-label="Mag-scroll sa gallery ng mga napuntahan"
+          >
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon>
+              <line x1="9" y1="3" x2="9" y2="18"></line>
+              <line x1="15" y1="6" x2="15" y2="21"></line>
+            </svg>
+            <span>Explore My Adventures</span>
+          </a>
+        </div>
+
+        <!-- NFC Digital Business Card Indicator -->
+        <div class="nfc-tap-pill" aria-label="NFC Digital Business Card">
+          <span class="nfc-pulse" aria-hidden="true"></span>
+          <span>NFC Digital Card &bull; Tap to Connect</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIORITY 3: TRAVEL PHOTOGRAPHY (MGA NAPUNTAHAN) -->
+    <section class="section gallery-section" id="gallery" aria-labelledby="galleryHeading">
+      <div class="section-header">
+        <span class="section-kicker">Travel Portfolio</span>
+        <h2 class="section-title" id="galleryHeading">Mga Napuntahan</h2>
+        <p class="section-subtitle">Mga tunay na kuha mula sa iba't ibang byahe. I-tap ang litrato para sa full view.</p>
+      </div>
+
+      <!-- Destination Category Filter Tabs -->
+      <div class="gallery-filter-tabs" id="galleryFilterTabs" role="tablist" aria-label="Filter by destination">
+        <!-- Rendered dynamically via js/app.js -->
+      </div>
+
+      <!-- Travel Gallery Grid -->
+      <div class="gallery-grid" id="galleryGrid" role="region" aria-label="Travel Gallery">
+        <!-- Rendered dynamically via js/app.js & js/config.js -->
+      </div>
+
+      <div class="gallery-footer-hint">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <span>I-tap ang anumang larawan upang buksan ang full photo viewer</span>
+      </div>
+    </section>
+
+    <!-- PRIORITY 4: ABOUT THE CREATOR (KILALA SI LONG) -->
+    <section class="section about-section" id="about" aria-labelledby="aboutHeading">
+      <div class="section-header">
+        <span class="section-kicker">Tungkol sa Creator</span>
+        <h2 class="section-title" id="aboutHeading">Kilala si Long</h2>
+      </div>
+
+      <div class="about-card">
+        <p class="about-text" id="aboutBio">
+          Kumusta! Ako si Long. Hilig kong maglakbay, umakyat sa mga bundok, tumambay sa tabing-dagat, at tuklasin ang kagandahan ng iba't ibang sulok ng ating bansa at karatig-lugar. Binuo ko ang Byahe ni Long upang ibahagi ang mga tunay na karanasan, magagandang tanawin, at mga kwentong baon sa bawat byahe. Tara, sabay tayong maglakbay!
+        </p>
+
+        <div class="about-highlights">
+          <div class="highlight-item">
+            <div class="highlight-icon">🌊</div>
+            <div class="highlight-label">Dagat</div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">⛰️</div>
+            <div class="highlight-label">Tanawin</div>
+          </div>
+          <div class="highlight-item">
+            <div class="highlight-icon">🎒</div>
+            <div class="highlight-label">Kwentuhan</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FACEBOOK COMMUNITY SECTION -->
+    <section class="section facebook-section" id="facebook" aria-labelledby="facebookHeading">
+      <div class="facebook-feature-card">
+        <div class="fb-badge-row">
+          <span class="fb-official-badge">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+            </svg>
+            Official Page
+          </span>
+          <span class="fb-handle-text">@ByaheNiLong</span>
+        </div>
+
+        <h2 class="facebook-title" id="facebookHeading">Sundan ang Byahe</h2>
+        <p class="facebook-text" id="facebookText">
+          Para sa mas marami pang travel stories, pictures, at bagong adventures, follow ang Byahe ni Long sa Facebook.
+        </p>
+
+        <a
+          href="https://www.facebook.com/ByaheNiLong"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+          id="btnFollowFacebookMain"
+          aria-label="Follow Byahe ni Long on Facebook"
+        >
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          <span>Follow Byahe ni Long on Facebook</span>
+        </a>
+      </div>
+
+      <!-- Prepared Reusable Container for Future Social Media Channels -->
+      <div class="more-socials-wrapper" id="moreSocialsWrapper" style="display: none;">
+        <div class="more-socials-kicker">
+          Iba pang Social Channels
+        </div>
+        <div class="more-socials-grid" id="moreSocialsGrid">
+          <!-- Populated if Instagram, TikTok, YouTube are configured in config.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIORITY 5: CONTACT INFORMATION (MAY TANONG? TARA, USAP!) -->
+    <section class="section contact-section" id="contact" aria-labelledby="contactHeading">
+      <div class="section-header">
+        <span class="section-kicker">Makipag-ugnayan</span>
+        <h2 class="section-title" id="contactHeading">May Tanong? Tara, Usap!</h2>
+        <p class="section-subtitle">Bukas para sa mga katanungan, travel inquiries, o simpleng kamustahan.</p>
+      </div>
+
+      <div class="contact-card">
+        <!-- Phone Display Banner -->
+        <div class="phone-display-banner">
+          <div class="phone-label">Numero ng Telepono</div>
+          <div class="phone-number-value" id="contactNumberDisplay" title="I-tap para kopyahin">
+            0956 092 9225
+          </div>
+          <div>
+            <button type="button" class="copy-phone-btn" id="btnCopyPhone" aria-label="Kopyahin ang numero">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <span id="btnCopyPhoneText">Kopyahin ang numero</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Contact Action Buttons: Visually secondary to the primary Facebook action -->
+        <div class="contact-actions-grid">
+          <a href="tel:09560929225" class="btn btn-secondary btn-call" id="btnCallNow" aria-label="Tawagan ang 09560929225">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            <span>Call Now</span>
+          </a>
+
+          <a href="sms:09560929225" class="btn btn-secondary btn-sms" id="btnSendSms" aria-label="Magpadala ng SMS sa 09560929225">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Send SMS</span>
+          </a>
+        </div>
+
+        <!-- NFC Superpower: Save to Contacts (.vcf) -->
+        <button type="button" class="btn btn-secondary btn-vcard" id="btnSaveVCard" aria-label="I-save ang contact details sa iyong telepono">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+            <polyline points="7 3 7 8 15 8"></polyline>
+          </svg>
+          <span>I-save sa Phone Contacts (.vcf)</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- PRIORITY 6: FOOTER AND SECONDARY DETAILS -->
+    <footer class="footer-section" role="contentinfo">
+      <div class="footer-brand" id="footerBrand">Byahe ni Long</div>
+      <p class="footer-closing" id="footerClosing">Mga Lakad, Tanawin, at Kwentong Baon.</p>
+
+      <div class="footer-links-row">
+        <a
+          href="https://www.facebook.com/ByaheNiLong"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="footer-link"
+          id="footerFbShortcut"
+        >
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          <span>Facebook</span>
+        </a>
+
+        <span class="footer-dot" aria-hidden="true">&bull;</span>
+
+        <a href="#contact" class="footer-link" id="footerContactShortcut">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>Makipag-ugnayan</span>
+        </a>
+      </div>
+
+      <div class="footer-bottom-copy">
+        &copy; <span id="currentYear">2026</span> Byahe ni Long. Lahat ng karapatan ay nakalaan.
+      </div>
+    </footer>
+
+    <!-- Quick Thumb Bottom Dock (Mobile Optimized Action Bar) -->
+    <nav class="bottom-dock" aria-label="Quick Actions Dock">
+      <div class="dock-content">
+        <a
+          href="https://www.facebook.com/ByaheNiLong"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="dock-btn dock-btn-fb"
+          id="dockFbBtn"
+          aria-label="Facebook Page"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+          </svg>
+          <span>Facebook</span>
+        </a>
+
+        <a href="tel:09560929225" class="dock-btn dock-btn-secondary" id="dockCallBtn" aria-label="Tawagan si Long">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          </svg>
+          <span>Tumawag</span>
+        </a>
+
+        <a href="sms:09560929225" class="dock-btn dock-btn-secondary" id="dockSmsBtn" aria-label="Mag-text kay Long">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>I-text</span>
+        </a>
+      </div>
+    </nav>
+
+  </div> <!-- End .app-shell -->
+
+  <!-- Lightbox Modal for Photo Inspection -->
+  <div
+    class="lightbox-modal"
+    id="galleryLightboxModal"
+    role="dialog"
+    aria-modal="true"
+    aria-hidden="true"
+    aria-label="Photo Viewer"
+  >
+    <div class="lightbox-overlay" id="lightboxOverlay"></div>
+
+    <div class="lightbox-header">
+      <div class="lightbox-counter" id="lightboxCounter">1 / 12</div>
+      <button type="button" class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Isara ang viewer">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="lightbox-inner">
+      <!-- Prev Button -->
+      <button type="button" class="lightbox-nav-btn lightbox-prev-btn" id="lightboxPrevBtn" aria-label="Nakaraang litrato">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="15 18 9 12 15 6"></polyline>
+        </svg>
+      </button>
+
+      <!-- Image Display Frame -->
+      <div class="lightbox-img-frame">
+        <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+      </div>
+
+      <!-- Next Button -->
+      <button type="button" class="lightbox-nav-btn lightbox-next-btn" id="lightboxNextBtn" aria-label="Susunod na litrato">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
+
+      <div class="lightbox-details">
+        <div class="lightbox-location-badge" id="lightboxLocation"></div>
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Application Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

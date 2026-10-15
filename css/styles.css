@@ -1,0 +1,1178 @@
+/* ==========================================================================
+   Byahe ni Long - Digital Business Card & Travel Landing Page
+   Theme: Neutral, Versatile, Editorial Travel Portfolio
+   Aesthetic: Warm Off-White, Charcoal, Stone/Muted Olive, Natural Photography
+   ========================================================================== */
+
+:root {
+  /* Neutral Editorial Color Palette */
+  --bg-page:           #f7f5f0;
+  --bg-shell:          #fdfcf9;
+  --bg-card:           #ffffff;
+  --bg-card-muted:     #f4f1ea;
+  --bg-sand-subtle:    #ece8df;
+
+  /* Typography Colors */
+  --c-text-primary:    #1a1e1b;
+  --c-text-secondary:  #4f5650;
+  --c-text-muted:      #7c847d;
+  --c-text-on-dark:    #ffffff;
+
+  /* Subtle Accent Tones (Neutral, Travel-Oriented) */
+  --c-accent-stone:    #8e8375;
+  --c-accent-olive:    #4a5449;
+  --c-accent-sand:     #ded7cb;
+  --c-warm-gold:       #bfa068;
+
+  /* Brand Accents */
+  --c-fb-blue:         #1877f2;
+  --c-fb-blue-hover:   #1263cf;
+
+  /* Neutral Borders */
+  --border-subtle:     rgba(26, 30, 27, 0.08);
+  --border-card:       rgba(26, 30, 27, 0.1);
+  --border-strong:     rgba(26, 30, 27, 0.18);
+
+  /* Soft Ambient Shadows */
+  --shadow-xs:         0 1px 3px rgba(26, 30, 27, 0.04);
+  --shadow-sm:         0 2px 8px rgba(26, 30, 27, 0.06);
+  --shadow-md:         0 6px 20px rgba(26, 30, 27, 0.08);
+  --shadow-lg:         0 14px 34px rgba(26, 30, 27, 0.11);
+
+  /* Consistent Radii (Clean, subtle rounded corners) */
+  --radius-xs:         6px;
+  --radius-sm:         10px;
+  --radius-md:         14px;
+  --radius-lg:         20px;
+  --radius-xl:         28px;
+  --radius-full:       9999px;
+
+  /* Typography */
+  --font-family:       'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --transition-smooth: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-family);
+  background-color: var(--bg-page);
+  color: var(--c-text-primary);
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: var(--bg-page);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  color: var(--c-text-primary);
+  line-height: 1.6;
+}
+
+/* Mobile-First App Shell Container (~390px - 480px) */
+.app-shell {
+  width: 100%;
+  max-width: 480px;
+  min-height: 100vh;
+  background-color: var(--bg-shell);
+  position: relative;
+  box-shadow: 0 0 50px rgba(26, 30, 27, 0.07);
+  overflow-x: hidden;
+  padding-bottom: 82px; /* Space for quick thumb bottom dock */
+  border-left: 1px solid var(--border-subtle);
+  border-right: 1px solid var(--border-subtle);
+}
+
+@media (min-width: 640px) {
+  body {
+    padding: 30px 16px;
+    background: radial-gradient(circle at 50% 10%, #edeae2 0%, #dbd6ca 100%);
+  }
+  .app-shell {
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--border-card);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+/* ==========================================================================
+   Top Sticky Navigation Bar
+   ========================================================================== */
+.top-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(253, 252, 249, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border-subtle);
+  transition: var(--transition-smooth);
+}
+
+.brand-mini {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--c-text-primary);
+}
+
+.brand-mini-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--border-strong);
+  object-fit: cover;
+  background-color: var(--bg-card-muted);
+  box-shadow: var(--shadow-xs);
+}
+
+.brand-mini-text {
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: -0.01em;
+  color: var(--c-text-primary);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.icon-btn-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 13px;
+  background: var(--bg-card);
+  color: var(--c-text-secondary);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  transition: var(--transition-smooth);
+  box-shadow: var(--shadow-xs);
+}
+
+.icon-btn-pill:hover, .icon-btn-pill:focus-visible {
+  background: var(--bg-card-muted);
+  color: var(--c-text-primary);
+  border-color: var(--border-strong);
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   PRIORITY 1: Hero / Brand Identity Section
+   Clean, editorial atmosphere with natural brand photo framing
+   ========================================================================== */
+.hero-section {
+  position: relative;
+  background: linear-gradient(180deg, #f5f2ea 0%, #fbfaf7 70%, #ffffff 100%);
+  color: var(--c-text-primary);
+  padding: 24px 20px 36px 20px;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Brand Image: Clean print-quality card preserving natural 1:1 square */
+.hero-brand-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.hero-brand-img-wrap {
+  position: relative;
+  width: 260px;
+  max-width: 80vw;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+  padding: 5px;
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition-smooth);
+}
+
+.hero-brand-card:hover .hero-brand-img-wrap {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hero-brand-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: calc(var(--radius-lg) - 5px);
+  display: block;
+  background-color: var(--bg-card-muted);
+}
+
+.verified-nfc-badge {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-full);
+  background: var(--c-text-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero-brand-badge-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--bg-sand-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--c-text-secondary);
+  padding: 5px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 14px;
+}
+
+.live-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--c-accent-olive);
+}
+
+.hero-title {
+  font-size: 2.15rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.15;
+  color: var(--c-text-primary);
+  margin-bottom: 6px;
+}
+
+.hero-tagline {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--c-accent-stone);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+
+.hero-intro {
+  font-size: 0.93rem;
+  line-height: 1.6;
+  color: var(--c-text-secondary);
+  max-width: 390px;
+  margin-bottom: 24px;
+}
+
+/* ==========================================================================
+   PRIORITY 2: Action Buttons & Button Hierarchy
+   - Primary: Follow on Facebook (Solid, prominent, high contrast)
+   - Secondary: Explore My Adventures (Quiet, neutral, refined)
+   ========================================================================== */
+.hero-cta-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  width: 100%;
+  min-height: 50px;
+  padding: 12px 20px;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: var(--transition-smooth);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.btn:active {
+  transform: scale(0.985);
+}
+
+/* Primary Button: Solid, high contrast, visually leading */
+.btn-primary {
+  background-color: var(--c-text-primary);
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(26, 30, 27, 0.16);
+}
+
+.btn-primary:hover, .btn-primary:focus-visible {
+  background-color: #2c322d;
+  box-shadow: 0 6px 18px rgba(26, 30, 27, 0.22);
+  transform: translateY(-1px);
+}
+
+/* Secondary Button: Visually quieter, clean neutral */
+.btn-secondary {
+  background-color: var(--bg-card);
+  color: var(--c-text-primary);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-secondary:hover, .btn-secondary:focus-visible {
+  background-color: var(--bg-card-muted);
+  border-color: var(--c-text-secondary);
+  transform: translateY(-1px);
+}
+
+/* NFC Digital Card Status Pill */
+.nfc-tap-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 5px 13px;
+  background: var(--bg-card-muted);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  color: var(--c-text-muted);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.nfc-pulse {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background: var(--c-accent-stone);
+  position: relative;
+}
+
+.nfc-pulse::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: var(--radius-full);
+  border: 1.5px solid var(--c-accent-stone);
+  animation: nfcPing 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes nfcPing {
+  0% { transform: scale(0.9); opacity: 1; }
+  75%, 100% { transform: scale(2.2); opacity: 0; }
+}
+
+/* ==========================================================================
+   Common Section Layout & Typography
+   ========================================================================== */
+.section {
+  padding: 30px 18px;
+}
+
+.section-header {
+  margin-bottom: 18px;
+}
+
+.section-kicker {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-accent-stone);
+  margin-bottom: 4px;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--c-text-primary);
+  line-height: 1.25;
+}
+
+.section-subtitle {
+  font-size: 0.86rem;
+  color: var(--c-text-secondary);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   PRIORITY 3: Travel Photography (Mga Napuntahan)
+   Consistent spacing, clean neutral card frames, authentic natural colors
+   ========================================================================== */
+.gallery-section {
+  background-color: var(--bg-shell);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Category Filter Tabs: Clean stone pills */
+.gallery-filter-tabs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+
+.gallery-filter-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-tab-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  padding: 7px 14px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-full);
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--c-text-secondary);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  user-select: none;
+  box-shadow: var(--shadow-xs);
+}
+
+.filter-tab-btn:hover {
+  background: var(--bg-card-muted);
+  border-color: var(--border-strong);
+  color: var(--c-text-primary);
+}
+
+.filter-tab-btn.active {
+  background: var(--c-text-primary);
+  border-color: var(--c-text-primary);
+  color: #ffffff;
+  box-shadow: var(--shadow-sm);
+}
+
+.filter-tab-count {
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.filter-tab-btn.active .filter-tab-count {
+  background: rgba(255, 255, 255, 0.22);
+  color: #ffffff;
+}
+
+/* Responsive 2-column Grid */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+@media (max-width: 340px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.gallery-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  border: 1px solid var(--border-card);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+  outline: none;
+}
+
+.gallery-card:hover, .gallery-card:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--border-strong);
+}
+
+.gallery-card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: var(--bg-card-muted);
+}
+
+.gallery-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: block;
+}
+
+.gallery-card:hover .gallery-card-img {
+  transform: scale(1.04);
+}
+
+.gallery-dest-tag {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: rgba(26, 30, 27, 0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.gallery-card-body {
+  padding: 10px 11px 12px 11px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.gallery-card-title {
+  font-size: 0.86rem;
+  font-weight: 700;
+  color: var(--c-text-primary);
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+
+.gallery-card-caption {
+  font-size: 0.74rem;
+  color: var(--c-text-muted);
+  line-height: 1.35;
+  margin-bottom: 6px;
+}
+
+.gallery-card-action {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--c-accent-stone);
+}
+
+.gallery-footer-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 14px;
+  font-size: 0.74rem;
+  color: var(--c-text-muted);
+  text-align: center;
+}
+
+/* ==========================================================================
+   PRIORITY 4: About the Creator (Kilala si Long)
+   Clean, friendly, brief editorial card
+   ========================================================================== */
+.about-section {
+  background-color: var(--bg-page);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.about-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 22px 18px;
+  box-shadow: var(--shadow-xs);
+  border: 1px solid var(--border-card);
+}
+
+.about-text {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  color: var(--c-text-secondary);
+  margin-bottom: 18px;
+}
+
+.about-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-subtle);
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 9px 6px;
+  background: var(--bg-card-muted);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.highlight-icon {
+  font-size: 1.3rem;
+  margin-bottom: 3px;
+}
+
+.highlight-label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--c-text-secondary);
+}
+
+/* ==========================================================================
+   Facebook Section (Sundan ang Byahe)
+   Clean editorial card with prominent Follow button
+   ========================================================================== */
+.facebook-section {
+  background-color: var(--bg-shell);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.facebook-feature-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 24px 18px;
+  border: 1px solid var(--border-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.fb-badge-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.fb-official-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--bg-sand-subtle);
+  color: var(--c-text-primary);
+  padding: 3px 9px;
+  border-radius: var(--radius-full);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--border-subtle);
+}
+
+.fb-handle-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--c-text-muted);
+}
+
+.facebook-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--c-text-primary);
+  margin-bottom: 6px;
+  line-height: 1.25;
+}
+
+.facebook-text {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--c-text-secondary);
+  margin-bottom: 18px;
+}
+
+/* Future Social Media Channels Component */
+.more-socials-wrapper {
+  margin-top: 16px;
+}
+
+.more-socials-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--c-text-muted);
+  text-transform: uppercase;
+  margin: 14px 0 8px 4px;
+  letter-spacing: 0.06em;
+}
+
+.more-socials-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+}
+
+.social-pill-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--bg-card);
+  padding: 11px 15px;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  border: 1px solid var(--border-card);
+  transition: var(--transition-smooth);
+}
+
+.social-pill-card:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+  border-color: var(--border-strong);
+}
+
+.social-icon-box {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-full);
+  background: var(--bg-card-muted);
+  color: var(--c-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   PRIORITY 5: Contact Section (May Tanong? Tara, Usap!)
+   Clean, functional, secondary action buttons
+   ========================================================================== */
+.contact-section {
+  background-color: var(--bg-page);
+}
+
+.contact-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  padding: 22px 18px;
+  box-shadow: var(--shadow-xs);
+  border: 1px solid var(--border-card);
+}
+
+.phone-display-banner {
+  text-align: center;
+  padding: 16px 14px;
+  background: var(--bg-card-muted);
+  border-radius: var(--radius-md);
+  border: 1px dashed var(--border-strong);
+  margin-bottom: 16px;
+}
+
+.phone-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--c-text-muted);
+  margin-bottom: 4px;
+}
+
+.phone-number-value {
+  font-size: 1.55rem;
+  font-weight: 800;
+  color: var(--c-text-primary);
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+  cursor: pointer;
+  user-select: all;
+  margin-bottom: 8px;
+}
+
+.copy-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: #ffffff;
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-full);
+  font-family: var(--font-family);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--c-text-secondary);
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.copy-phone-btn:hover {
+  background: var(--bg-sand-subtle);
+  color: var(--c-text-primary);
+  border-color: var(--border-strong);
+}
+
+.contact-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.btn-vcard {
+  margin-top: 2px;
+  font-size: 0.86rem;
+}
+
+/* ==========================================================================
+   PRIORITY 6: Footer and Secondary Details
+   Simple, unobtrusive
+   ========================================================================== */
+.footer-section {
+  padding: 30px 18px 22px 18px;
+  text-align: center;
+  background-color: #f0ece3;
+  color: var(--c-text-secondary);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.footer-brand {
+  font-size: 1.15rem;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--c-text-primary);
+  margin-bottom: 3px;
+}
+
+.footer-closing {
+  font-size: 0.84rem;
+  color: var(--c-text-muted);
+  font-style: italic;
+  margin-bottom: 16px;
+}
+
+.footer-links-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--c-text-secondary);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.footer-link:hover {
+  color: var(--c-text-primary);
+  text-decoration: underline;
+}
+
+.footer-dot {
+  opacity: 0.4;
+  color: var(--c-text-muted);
+}
+
+.footer-bottom-copy {
+  font-size: 0.72rem;
+  color: var(--c-text-muted);
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 14px;
+}
+
+/* ==========================================================================
+   Quick Thumb Bottom Dock (Mobile Optimized Action Bar)
+   ========================================================================== */
+.bottom-dock {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 95;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+  padding: 0 12px 12px 12px;
+}
+
+.dock-content {
+  pointer-events: auto;
+  width: 100%;
+  max-width: 440px;
+  background: rgba(253, 252, 249, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-card);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-lg);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 5px;
+  gap: 6px;
+}
+
+.dock-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 9px 6px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: var(--transition-smooth);
+  user-select: none;
+}
+
+.dock-btn:active {
+  transform: scale(0.96);
+}
+
+/* Facebook in dock is the primary accent */
+.dock-btn-fb {
+  background-color: var(--c-text-primary);
+  color: #ffffff;
+}
+
+.dock-btn-fb:hover {
+  background-color: #2c322d;
+}
+
+/* Call and SMS in dock are clean secondary */
+.dock-btn-secondary {
+  background-color: var(--bg-card);
+  color: var(--c-text-secondary);
+  border: 1px solid var(--border-card);
+}
+
+.dock-btn-secondary:hover {
+  background-color: var(--bg-card-muted);
+  color: var(--c-text-primary);
+}
+
+/* ==========================================================================
+   Interactive Lightbox Modal
+   ========================================================================== */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 16px;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 20, 19, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  z-index: 1;
+}
+
+.lightbox-header {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.lightbox-counter {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #ded7cb;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.lightbox-close-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.lightbox-close-btn:hover {
+  background: rgba(255, 255, 255, 0.28);
+  transform: rotate(90deg);
+}
+
+.lightbox-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-nav-btn {
+  position: absolute;
+  top: 42%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  background: rgba(26, 30, 27, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox-nav-btn:hover {
+  background: #000000;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.lightbox-prev-btn {
+  left: 6px;
+}
+
+.lightbox-next-btn {
+  right: 6px;
+}
+
+.lightbox-img-frame {
+  width: 100%;
+  max-height: 65vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.6);
+  background: #000000;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  display: block;
+  user-select: none;
+}
+
+.lightbox-details {
+  margin-top: 12px;
+  text-align: center;
+  color: #ffffff;
+  max-width: 90%;
+}
+
+.lightbox-location-badge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #ded7cb;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 3px;
+}
+
+.lightbox-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 3px;
+}
+
+.lightbox-caption {
+  font-size: 0.82rem;
+  color: #cfd4cf;
+  line-height: 1.45;
+}
+
+/* Toast Notification Notice */
+.toast-notice {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  z-index: 150;
+  background: var(--c-text-primary);
+  color: #ffffff;
+  padding: 9px 18px;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.toast-notice.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
